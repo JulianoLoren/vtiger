@@ -28,7 +28,7 @@ class Users_List_View extends Settings_Vtiger_List_View {
 	public function process(Vtiger_Request $request) {
 		$viewer = $this->getViewer($request);
 		$this->initializeListViewContents($request, $viewer);
-
+//var_dump($viewer);
 		$viewer->view('ListViewContents.tpl', $request->getModule(false));
 	}
 
@@ -172,6 +172,7 @@ class Users_List_View extends Settings_Vtiger_List_View {
                 $runtime_configs = Vtiger_Runtime_Configs::getInstance();
                 $password_regex = $runtime_configs->getValidationRegex('password_regex');
                 $viewer->assign('PWD_REGEX', $password_regex);
+//		die("===============================================");
 	}
 
 	/**

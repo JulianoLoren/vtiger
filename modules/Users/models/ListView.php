@@ -83,6 +83,7 @@ class Users_ListView_Model extends Vtiger_ListView_Model {
             $param[] = $user->id;
 			//TODO: Consider user based on Role-heirarchy 
 		}
+//		die( $db->convert2Sql($listQuery, $param));
 		return $db->convert2Sql($listQuery, $param);
     }
 
@@ -92,6 +93,7 @@ class Users_ListView_Model extends Vtiger_ListView_Model {
 	 * @return <Array> - Associative array of record id mapped to Vtiger_Record_Model instance.
 	 */
 	public function getListViewEntries($pagingModel) {
+
 		$queryGenerator = $this->get('query_generator');
                 
 		// Added as Users module do not have custom filters and id column is added by querygenerator.

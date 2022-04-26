@@ -54,7 +54,7 @@ class Users_Login_Action extends Vtiger_Action_Controller {
 			if(isset($_SESSION['return_params'])){
 				$return_params = $_SESSION['return_params'];
 			}
-
+			//header ('Location: index.php?module=Home&view=Dashboard');
 			header ('Location: index.php?module=Users&parent=Settings&view=SystemSetup');
 			exit();
 		} else {

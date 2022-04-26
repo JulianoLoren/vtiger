@@ -53,12 +53,12 @@ class Vtiger_Utils {
 		// Set the base directory to compare with
 		$use_root_directory = $root_directory;
 		if(empty($use_root_directory)) {
-			$use_root_directory = realpath(dirname(__FILE__).'/../../.');
+			$use_root_directory = __realpath__(dirname(__FILE__).'/../../.');
 		}
 
 		$unsafeDirectories = array('storage', 'cache', 'test');
 
-		$realfilepath = realpath($filepath);
+		$realfilepath = __realpath__($filepath);
 
 		/** Replace all \\ with \ first */
 		$realfilepath = str_replace('\\\\', '\\', $realfilepath);
@@ -98,10 +98,10 @@ class Vtiger_Utils {
 		// Set the base directory to compare with
 		$use_root_directory = $root_directory;
 		if(empty($use_root_directory)) {
-			$use_root_directory = realpath(dirname(__FILE__).'/../../.');
+			$use_root_directory = __realpath__(dirname(__FILE__).'/../../.');
 		}
 
-		$realfilepath = realpath($filepath);
+		$realfilepath = __realpath__($filepath);
 
 		/** Replace all \\ with \ first */
 		$realfilepath = str_replace('\\\\', '\\', $realfilepath);
