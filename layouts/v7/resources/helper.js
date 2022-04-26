@@ -98,10 +98,10 @@ jQuery.Class("Vtiger_Helper_Js",{
             splittedDate = dateComponent.split('-');
         }
 
-        if(splittedDate.length > 3) {
-            var errorMsg = app.vtranslate("JS_INVALID_DATE");
-            throw errorMsg;
-        }
+        //if(splittedDate.length > 3) {
+        //    var errorMsg = app.vtranslate("JS_INVALID_DATE");
+        //    throw errorMsg;
+        //}
 
         if (dateFormat.indexOf('.') !== -1) {
             splittedDateFormat = dateFormat.split('.');

@@ -382,7 +382,7 @@ var vtUtils = {
     addMask: function (container) {
             if (container.length && jQuery('#vt-mask').length == 0) {
                     var mask = '<div id="vt-mask" class="vt-page-mask" ></div>'
-                    container.before(mask);
+                    // container.before(mask);
             }
     },
 

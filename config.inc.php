@@ -16,7 +16,7 @@
 // Adjust error_reporting favourable to deployment.
 version_compare(PHP_VERSION, '5.5.0') <= 0 ? error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED & E_ERROR) : error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED & E_ERROR & ~E_STRICT); // PRODUCTION
 //ini_set('display_errors','on'); version_compare(PHP_VERSION, '5.5.0') <= 0 ? error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED) : error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT);   // DEBUGGING
-#ini_set('display_errors','on'); error_reporting(E_ALL); // STRICT DEVELOPMENT
+//ini_set('display_errors','on'); error_reporting(E_ALL); // STRICT DEVELOPMENT
 
 if (getenv('VT_DEBUG') && !in_array(strtolower(getenv('VT_DEBUG')), ['false', '0'])) {
     ini_set('display_errors', 'on');
@@ -56,7 +56,7 @@ $dbconfig['db_port'] = ':'.(getenv('MYSQL_PORT') ?: '3306');
 $dbconfig['db_username'] = getenv('MYSQL_USER') ?: 'root';
 $dbconfig['db_password'] = getenv('MYSQL_PASSWORD') ?: getenv('MYSQL_ROOT_PASSWORD');
 $dbconfig['db_name'] = getenv('MYSQL_DATABASE') ?: 'vtigercrm';
-$dbconfig['db_type'] = getenv('MYSQL_TYPE') ?: 'mysqli';//i
+$dbconfig['db_type'] = getenv('MYSQL_TYPE') ?: 'mysqli';
 $dbconfig['db_status'] = 'true';
 
 // TODO: test if port is empty

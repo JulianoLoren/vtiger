@@ -135,7 +135,7 @@ class Emails_MassSaveAjax_View extends Vtiger_Footer_View {
 		$processedContent = Emails_Mailer_Model::getProcessedContent($content); // To remove script tags
 		$mailerInstance = Emails_Mailer_Model::getInstance();
 		$processedContentWithURLS = decode_html($mailerInstance->convertToValidURL($processedContent));
-		$recordModel->set('description', $processedContentWithURLS);
+		$recordModel->set('description', $content);
 		$recordModel->set('subject', $request->get('subject'));
 		$recordModel->set('toMailNamesList',$request->get('toMailNamesList'));
 		$recordModel->set('saved_toid', $to);

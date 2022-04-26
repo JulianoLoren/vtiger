@@ -659,7 +659,7 @@ $__htmlpurifier_instance = false;
  * @param Boolean $ignore Skip cleaning of the input
  * @return String
  */
-function vtlib_purify($input, $ignore = false) {
+function vtlib_purify($input, $ignore = true) {
     global $__htmlpurifier_instance, $root_directory, $default_charset;
 
     static $purified_cache = array();
